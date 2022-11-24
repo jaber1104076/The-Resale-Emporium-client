@@ -16,7 +16,8 @@ const SignUp = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        // console.log(name, email, password)
+        const user = form.users.value;
+        console.log(name, email, password, user)
 
         CreateUser(email, password)
             .then((result) => {
@@ -60,6 +61,12 @@ const SignUp = () => {
                                     <span className="label-text">User Name</span>
                                 </label>
                                 <input type="text" name='name' placeholder="Enter Name" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <select name='users' className="select select-bordered w-full max-w-xs">
+                                    <option value='user'>user</option>
+                                    <option value='seller'>seller</option>
+                                </select>
                             </div>
                             <div className="form-control">
                                 <label className="label">

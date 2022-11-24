@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="p-10">
-            <div className='footer'>
+        <footer className="p-10 bg-gradient-to-r from-[#ff5f6d] to-[#ffc371]">
+            <div className='footer '>
                 <div>
                     <span className="footer-title">Services</span>
                     <Link to="/" className="link link-hover">Branding</Link>
