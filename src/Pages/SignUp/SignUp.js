@@ -63,6 +63,9 @@ const SignUp = () => {
                                 <input type="text" name='name' placeholder="Enter Name" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Buyer/Seller</span>
+                                </label>
                                 <select name='users' className="select select-bordered w-full max-w-xs">
                                     <option value='user'>user</option>
                                     <option value='seller'>seller</option>
