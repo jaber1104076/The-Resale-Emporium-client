@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import React, { useState } from 'react';
 import BookingModal from '../../Shared/BookingModal/BookingModal';
 
 const CatagoryInfo = ({ catagory }) => {
     const [booking, setBooking] = useState(null)
-    const [data, setData] = useState("")
     const { model, resale_price, original_price, seller, use, image, location, _id } = catagory
 
-    useEffect(() => {
-        fetch(`http://localhost:5000/catagories/${_id}`)
-            .then(res => res.json())
-            .then(data => setData(data))
-    }, [_id])
+    const { data: bookingData, refetch = [] } = useQuery({
+        queryKey: ['catagories', _id],
+        queryFn: async () => {
+            const res = await fetch(`http://localhost:5000/catagories/${_id}`)
+            const data = await res.json()
+            return data;
+        }
+    })
 
     return (
         <div>
@@ -28,7 +31,7 @@ const CatagoryInfo = ({ catagory }) => {
                         <p>Used: {use}years</p>
                     </div>
                     <div className="card-action mt-5 flex justify-center">
-                        <label onClick={() => setBooking(data)} htmlFor="confirm-modal"
+                        <label onClick={() => setBooking(bookingData)} htmlFor="confirm-modal"
                             className="btn w-full py-3 rounded-lg hover:text-gray-100 bg-gradient-to-r from-[#fc4a1a] to-[#f7b733] text-white "
                         >Book Now</label>
                     </div>
@@ -38,6 +41,7 @@ const CatagoryInfo = ({ catagory }) => {
                 <BookingModal
                     booking={booking}
                     setBooking={setBooking}
+                    refetch={refetch}
                 ></BookingModal>}
         </div>
     );

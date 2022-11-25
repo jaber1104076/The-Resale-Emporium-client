@@ -4,6 +4,7 @@ import { FaGoogle } from 'react-icons/fa'
 import { AuthContext } from '../../contexts/ContextProvider';
 import useTitle from '../../Hooks/UseTitle';
 import PrimaryButton from '../../Components/PrimaryButton/PrimaryButton';
+import toast from 'react-hot-toast';
 
 const SignUp = () => {
     const { CreateUser, googleSignIn, updateUser } = useContext(AuthContext)
@@ -16,20 +17,20 @@ const SignUp = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        const user = form.users.value;
-        console.log(name, email, password, user)
+        const userdata = form.users.value;
+        console.log(name, email, password)
 
         CreateUser(email, password)
             .then((result) => {
-                const user = result.user;
-                console.log(user);
+                // const user = result.user;
+                // console.log(user);
                 const userInfo = {
                     displayName: name
                 }
                 updateUser(userInfo)
                     .then(() => {
+                        saveUser(name, email, userdata)
                         form.reset()
-                        navigate('/')
                     })
                     .catch(err => console.log(err));
 
@@ -48,6 +49,22 @@ const SignUp = () => {
             })
             .catch((err) => console.log(err))
     }
+    const saveUser = (name, email, user) => {
+        const users = { name, email, user };
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(users)
+        })
+            .then(res => res.json())
+            .then(data => {
+                toast.success('user send to database')
+                navigate('/')
+            })
+    }
+
 
     return (
         <div className='mt-5 mb-5'>
