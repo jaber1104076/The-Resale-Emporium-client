@@ -4,7 +4,7 @@ import { AuthContext } from '../../../contexts/ContextProvider';
 
 const BookingModal = ({ booking, setBooking, refetch }) => {
     const { user } = useContext(AuthContext)
-    const { model, resale_price } = booking
+    const { model, resale_price, image } = booking
 
     const handlenull = () => {
         setBooking(null)
@@ -25,6 +25,7 @@ const BookingModal = ({ booking, setBooking, refetch }) => {
             phone,
             price: resale_price,
             address,
+            image,
             time: data.getTime()
         }
         fetch('http://localhost:5000/bookings', {
