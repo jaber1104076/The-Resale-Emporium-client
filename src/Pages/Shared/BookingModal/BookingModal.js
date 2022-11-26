@@ -61,8 +61,8 @@ const BookingModal = ({ booking, setBooking, refetch }) => {
                     <label onClick={handlenull} htmlFor="confirm-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="font-bold text-lg">{model}</h3>
                     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
-                        <input name="name" type="text" defaultValue={user?.displayName} disabled placeholder="Your Name" className="input w-full input-bordered" />
-                        <input name="email" type="email" defaultValue={user?.email} disabled placeholder="Email Address" className="input w-full input-bordered" />
+                        <input name="name" type="text" defaultValue={user?.displayName} disabled placeholder="Your Name" className="input w-full input-bordered" required />
+                        <input name="email" type="email" defaultValue={user?.email} disabled placeholder="Email Address" className="input w-full input-bordered" required />
                         <input type="text" defaultValue={booking.model} disabled className="input w-full input-bordered " />
                         <input type="text" defaultValue={booking.resale_price} disabled className="input w-full input-bordered " />
                         <input name="phone" type="text" placeholder="Phone Number" className="input w-full input-bordered" />
