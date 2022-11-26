@@ -44,8 +44,7 @@ const SignUp = () => {
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then((result) => {
-                const user = result.user;
-                console.log(user)
+                navigate('/')
             })
             .catch((err) => console.log(err))
     }
