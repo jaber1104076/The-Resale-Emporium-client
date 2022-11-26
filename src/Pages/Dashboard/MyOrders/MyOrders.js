@@ -36,7 +36,7 @@ const MyOrders = () => {
                     <tbody>
                         {
                             order &&
-                            order?.map((booking, i) => <tr key={booking._id}>
+                            order?.sort((a, b) => b.time - a.time).map((booking, i) => <tr key={booking._id}>
                                 <th>{i + 1}</th>
                                 <td>
                                     <div className="avatar">
