@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="p-10 bg-gradient-to-r from-[#ff5f6d] to-[#ffc371]">
-            <div className='footer text-white'>
+        <footer className="p-10">
+            <div className='footer'>
                 <div>
                     <span className="footer-title opacity-100">Services</span>
                     <Link to="/" className="link link-hover">Branding</Link>
@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='text-center mt-10'>
-                <p className='text-white'>Copyright © 2022 - All right reserved by The Resale Emporium ltd</p>
+                <p>Copyright © 2022 - All right reserved by The Resale Emporium ltd</p>
             </div>
         </footer>
     );

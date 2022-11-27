@@ -75,14 +75,15 @@ const AddProducts = () => {
 
     return (
         <section>
-            <h3 className='text-2xl font-mono'>Add Your Products</h3>
-            <div className='w-96 p-5 shadow bg-gray-100 rounded-lg'>
-                <form onSubmit={handleAddProducts} className='grid grid-cols-1 gap-3 mt-10'>
+            <h3 className='text-2xl font-mono mb-5'>Add Your Products</h3>
+            <div className='w-100 p-5 shadow bg-gray-100 rounded-lg'>
+                <h3 className="text-center text-gray-600 text-2xl">Provide relevent information</h3>
+                <form onSubmit={handleAddProducts} className='grid grid-cols-2 gap-5 mt-5'>
                     <input name="username" type="text" defaultValue={user?.displayName} readOnly className="input  input-bordered" />
                     <input name="email" type="email" defaultValue={user?.email} readOnly className="input  input-bordered" />
                     <input name="name" type="text" placeholder="Your Products Name" className="input  input-bordered" />
                     <input name="price" type="text" placeholder="Products Price" className="input input-bordered" />
-                    <input type="file" name='image' className="input input-bordered w-full max-w-xs" />
+                    <input type="file" name='image' className="input input-bordered" />
                     <select name='condition' className="select select-bordered">
                         <option value='excellent'>Excellent</option>
                         <option value='good'>Good</option>
@@ -96,7 +97,7 @@ const AddProducts = () => {
                         <option value='good'>Samsung</option>
                         <option value='fair'>Xiomi</option>
                     </select>
-                    <textarea name="description" placeholder='Add Your Products description'></textarea>
+                    <textarea className='p-2' name="description" placeholder='Add Your Products description'></textarea>
                     <br />
                     <input className="btn py-3 rounded-lg hover:text-gray-100 bg-gradient-to-r from-[#fc4a1a] to-[#f7b733] text-white" type="submit" value="Submit" />
                 </form>
