@@ -30,10 +30,10 @@ const BookingModal = ({ booking, setBooking, refetch }) => {
             image,
             time: data.getTime()
         }
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://b612-used-products-resale-server-side-jaber1104076.vercel.app/bookings', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
             },
             body: JSON.stringify(book)
         })
@@ -42,6 +42,7 @@ const BookingModal = ({ booking, setBooking, refetch }) => {
                 if (data.acknowledged && user?.email) {
                     setBooking(null)
                     toast.success('Booking confirmed');
+                    navigate('/')
                     refetch()
                 }
                 else {

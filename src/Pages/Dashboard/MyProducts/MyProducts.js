@@ -13,7 +13,7 @@ const MyProducts = () => {
     const { data: products, isLoading, refetch = [] } = useQuery({
         queryKey: ['myproducts', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/myproducts?email=${user?.email}`, {
+            const res = await fetch(`https://b612-used-products-resale-server-side-jaber1104076.vercel.app/myproducts?email=${user?.email}`, {
                 // headers: {
                 //     authorization: `bearer ${localStorage.getItem('accessToken')}`
                 // }
@@ -32,7 +32,7 @@ const MyProducts = () => {
         const data = new Date()
         const confirm = window.confirm('Are you sure want to confirm ')
         if (confirm) {
-            fetch('http://localhost:5000/advertise', {
+            fetch('https://b612-used-products-resale-server-side-jaber1104076.vercel.app/advertise', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'
@@ -56,7 +56,7 @@ const MyProducts = () => {
     const handleDeleteProducts = (id) => {
         const confirm = window.confirm('Are you sure to delete products')
         if (confirm) {
-            fetch(`http://localhost:5000/myProducts/${id}`, {
+            fetch(`https://b612-used-products-resale-server-side-jaber1104076.vercel.app/myProducts/${id}`, {
                 method: 'DELETE',
                 // headers: {
                 //     authorization: `bearer ${localStorage.getItem('accessToken')}`

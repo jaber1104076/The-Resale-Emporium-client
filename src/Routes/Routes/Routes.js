@@ -50,7 +50,7 @@ const router = createBrowserRouter([
             {
                 path: '/catagory/:name',
                 element: <Catagory></Catagory>,
-                loader: ({ params }) => fetch(`http://localhost:5000/catagory/${params.name}`)
+                loader: ({ params }) => fetch(`https://b612-used-products-resale-server-side-jaber1104076.vercel.app/catagory/${params.name}`)
 
             },
         ]
@@ -82,7 +82,7 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/payment/:id',
                 element: <Payment></Payment>,
-                loader: ({ params }) => fetch(`http://localhost:5000/bookings/${params.id}`)
+                loader: ({ params }) => fetch(`https://b612-used-products-resale-server-side-jaber1104076.vercel.app/bookings/${params.id}`)
             },
         ]
     }

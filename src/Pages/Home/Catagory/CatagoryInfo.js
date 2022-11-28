@@ -9,7 +9,7 @@ const CatagoryInfo = ({ catagory }) => {
     const { data: bookingData, refetch = [] } = useQuery({
         queryKey: ['catagories', _id],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/catagories/${_id}`)
+            const res = await fetch(`https://b612-used-products-resale-server-side-jaber1104076.vercel.app/catagories/${_id}`)
             const data = await res.json()
             return data;
         }

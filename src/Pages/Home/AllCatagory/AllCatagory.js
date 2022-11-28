@@ -8,7 +8,7 @@ const AllCatagory = () => {
     const { data: catagories = [] } = useQuery({
         queryKey: ['allcatagory'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/allcatagory')
+            const res = await fetch('https://b612-used-products-resale-server-side-jaber1104076.vercel.app/allcatagory')
             const data = await res.json()
             return data
         }

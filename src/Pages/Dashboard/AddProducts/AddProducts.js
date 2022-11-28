@@ -49,7 +49,7 @@ const AddProducts = () => {
                         image: imgData.data.url,
                         time: data.getTime()
                     }
-                    fetch('http://localhost:5000/addproducts', {
+                    fetch('https://b612-used-products-resale-server-side-jaber1104076.vercel.app/addproducts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'
