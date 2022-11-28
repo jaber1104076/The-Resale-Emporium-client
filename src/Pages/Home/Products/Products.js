@@ -20,8 +20,8 @@ const Products = () => {
     return (
         <div className='my-10 mx-20'>
             <div className='my-7'>
-                <h3 className='text-center text-3xl text-orange-600 font-mono'>Catagory</h3>
-                <p className='text-center text-orange-400 font-medium'>All kinds of catagory Showed here</p>
+                <h3 className='text-center text-3xl text-green-500 font-mono'>Catagory</h3>
+                <p className='text-center text-green-400 font-medium'>All kinds of catagory Showed here</p>
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-3'>
                 {

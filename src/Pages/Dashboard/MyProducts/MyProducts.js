@@ -69,7 +69,7 @@ const MyProducts = () => {
     return (
         <div>
             <div>
-                <h3 className='text-2xl text-[#B762C1] font-mono mb-5'>My products</h3>
+                <h3 className='text-2xl text-gray-600 font-mono mb-5'>My products</h3>
                 <div className="overflow-x-auto">
                     <table className="table sm:w-1/4 lg:w-full">
                         <thead className='text-green-500'>

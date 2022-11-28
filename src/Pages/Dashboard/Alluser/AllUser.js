@@ -57,13 +57,14 @@ const AllUser = () => {
     return (
         <div>
             <div>
-                <h2 className="text-3xl mb-5">All Users</h2>
+                <h2 className="text-3xl text-gray-600 mb-5 font-mono">All Users</h2>
                 <div className="overflow-x-auto">
                     <table className="table w-full">
-                        <thead>
+                        <thead className='text-green-500'>
                             <tr>
                                 <th></th>
                                 <th>Name</th>
+                                <th>Status</th>
                                 <th>Email</th>
                                 <th>Admin</th>
                                 <th>Delete</th>
@@ -74,6 +75,7 @@ const AllUser = () => {
                                 users.map((user, i) => <tr key={user._id}>
                                     <th>{i + 1}</th>
                                     <td>{user.name}</td>
+                                    <td>{user.user}</td>
                                     <td>{user.email}</td>
                                     <td>{user?.role !== 'admin' && <button onClick={() => handleMakeAdmin(user._id)} className='btn btn-xs btn-primary'>Make Admin</button>}</td>
                                     <td>

@@ -26,7 +26,7 @@ const MyOrders = () => {
             <h3 className='text-3xl font-mono text-gray-800 mb-5'>My Orders</h3>
             <div className="overflow-x-auto">
                 <table className="table w-full">
-                    <thead>
+                    <thead className='text-green-500'>
                         <tr>
                             <th></th>
                             <th>image</th>
