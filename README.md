@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+## The resale Emporium Repository
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This website will deal with the used phone resale or used phone resycle for the future investment .People will sell used goods right in front of their home in what is called a Home resale. The products would be set up in front of the garage.In the BD, people buy and sell at a mobile  sale. Sellers will sell their mobile to a large field, laden with products both used and new, and sell out of their used phone.
 
-## Available Scripts
+## Live Link
 
-In the project directory, you can run:
+Hosted in Firebase -> [The resale Emporium]()
 
-### `npm start`
+## Admin Id and Password
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Admin id -> jaber1104076@gamil.com
+Admin Password -> 123456
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Firebase - Google
+Firebase -> [Link](https://firebase.google.com/?hl=es-419)
 
-### `npm test`
+## Context API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## MongoDB Atlas - Google
+MongoDB Atlas -> [Link](https://www.mongodb.com/cloud/atlas/register)
 
-### `npm run build`
+Documentation Link -> [Link](https://reactjs.org/docs/context.html#api)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## React Router Dom v6.4 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Resources & Credits
 
-### `npm run eject`
+## React Tailwind Components -> 
+[Tailwind](https://tailwindcss.com/docs/guides/create-react-app)
+[DaisyUI](https://daisyui.com/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Other Resources
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Icon -> [React Icons](https://react-icons.github.io/react-icons/)
+## [react-hot-toast](https://react-hot-toast.com/)
+## [react-useQuery](https://tanstack.com/query/v4/docs/overview)
+## [react-Stripe](https://stripe.com/)
+## [react-router-dom](https://reactrouter.com/en/main)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+/*
+## Basic Router Setup:
+1. npx create-react-app 
+2. npm install react-router-dom
+3. create a router using createBrowserRouter
+4. add RouterProvider and set router props
+5. create a lot of components
+6. create Main layout with some common part and one changing part based on the route
+7. set Main layout at the root of the route
+8. set children routes
+9. set Links on the header components
+*/
 
-## Learn More
+/*
+## Context API:
+1. Declare a context
+2. set provider with value
+3. useContext in the place where you want to get the context
+ */
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ /*
+ ## Private Route
+ 1. Declare a private route component
+ */
+ /*
+ ## Admin Route
+ 1. Declare a Admin route component
+ */
