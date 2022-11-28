@@ -4,13 +4,18 @@ import { FaGoogle } from 'react-icons/fa'
 import { AuthContext } from '../../contexts/ContextProvider';
 import useTitle from '../../Hooks/UseTitle';
 import PrimaryButton from '../../Components/PrimaryButton/PrimaryButton';
-import toast from 'react-hot-toast';
+import useToken from '../../Hooks/UseToken';
 
 const SignUp = () => {
     const { CreateUser, googleSignIn, updateUser } = useContext(AuthContext)
     const [error, setError] = useState("")
+    const [createdUserEmail, setCreatedUserEmail] = useState('');
+    const [token] = useToken(createdUserEmail);
     useTitle('Sign up')
     const navigate = useNavigate()
+    if (token) {
+        navigate('/')
+    }
     const handleSignUp = e => {
         e.preventDefault()
         const form = e.target;
@@ -22,8 +27,6 @@ const SignUp = () => {
 
         CreateUser(email, password)
             .then((result) => {
-                // const user = result.user;
-                // console.log(user);
                 const userInfo = {
                     displayName: name
                 }
@@ -59,8 +62,9 @@ const SignUp = () => {
         })
             .then(res => res.json())
             .then(data => {
-                toast.success('user send to database')
-                navigate('/')
+                // toast.success('user send to database')
+                // navigate('/')
+                setCreatedUserEmail(email);
             })
     }
 

@@ -2,16 +2,22 @@ import React, { useContext, useState } from 'react';
 import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa'
 import { AuthContext } from '../../contexts/ContextProvider';
-import useTitle from '../../Hooks/UseTitle';
 import PrimaryButton from '../../Components/PrimaryButton/PrimaryButton';
+import useToken from '../../Hooks/UseToken';
 
 const Login = () => {
     const { LogIn, googleSignIn } = useContext(AuthContext)
     const [error, setError] = useState('')
-    useTitle('Login')
+    // useTitle('Login')
+    const [loginUserEmail, setLoginUserEmail] = useState('');
+    const [token] = useToken(loginUserEmail);
     const navigate = useNavigate()
     const location = useLocation
     const from = location.state?.from?.pathname || "/";
+    if (token) {
+        navigate(from, { replace: true })
+    }
+
     const handleLogIn = e => {
         e.preventDefault()
         const form = e.target;
@@ -22,8 +28,8 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user)
-                form.reset()
-                navigate(from, { replace: true })
+                setLoginUserEmail(email);
+
             })
             .catch((err) => {
                 console.log(err)
