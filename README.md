@@ -4,7 +4,7 @@ This website will deal with the used phone resale or used phone resycle for the 
 
 ## Live Link
 
-Hosted in Firebase -> [The resale Emporium]()
+Hosted in Firebase -> [The resale Emporium](https://the-resale-emporium.web.app/)
 
 ## Admin Id and Password
 
