@@ -8,8 +8,8 @@ Hosted in Firebase -> [The resale Emporium]()
 
 ## Admin Id and Password
 
-Admin id -> jaber1104076@gmail.com
-Admin Password -> 123456
+Admin id :<jaber1104076@gmail.com>
+Admin Password :<123456>
 
 ## Firebase - Google
 Firebase -> [Link](https://firebase.google.com/?hl=es-419)
