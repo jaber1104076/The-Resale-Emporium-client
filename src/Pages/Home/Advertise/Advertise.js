@@ -23,6 +23,7 @@ const Advertise = () => {
                             <figure className="px-10 pt-10">
                                 <img src={adv.image} alt="Shoes" className="rounded-xl" />
                             </figure>
+
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title">{adv.productName}</h2>
                                 <p>Price: ${adv.price}</p>

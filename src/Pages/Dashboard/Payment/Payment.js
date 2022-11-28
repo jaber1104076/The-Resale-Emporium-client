@@ -2,6 +2,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import React from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
+import useTitle from '../../../Hooks/UseTitle';
 import SmallSpinner from '../../Shared/Spinner/SmallSpinner';
 import CheckoutForm from './CheckoutForm';
 
@@ -11,7 +12,7 @@ const stripePromise = loadStripe(process.env.REACT_APP_stripe_pk);
 const Payment = () => {
     const booking = useLoaderData();
     // console.log('booking', booking);
-
+    useTitle('Payment')
     const navigate = useNavigate();
 
     const { model, price } = booking;

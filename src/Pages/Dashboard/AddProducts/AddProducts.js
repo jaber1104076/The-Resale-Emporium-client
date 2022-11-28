@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/ContextProvider';
+import useTitle from '../../../Hooks/UseTitle';
 
 const AddProducts = () => {
     const { user } = useContext(AuthContext)
     const navigate = useNavigate()
+    useTitle('Add Products')
     const imageHostKey = process.env.REACT_APP_imgbb_key;
     const handleAddProducts = event => {
         event.preventDefault()

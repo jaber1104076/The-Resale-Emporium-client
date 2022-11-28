@@ -2,11 +2,14 @@ import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../contexts/ContextProvider';
+import useTitle from '../../../Hooks/UseTitle';
 import SmallSpinner from '../../Shared/Spinner/SmallSpinner';
 
 
 const MyProducts = () => {
     const { user } = useContext(AuthContext)
+
+    useTitle('My Products')
     const { data: products, isLoading, refetch = [] } = useQuery({
         queryKey: ['myproducts', user?.email],
         queryFn: async () => {
@@ -34,7 +37,7 @@ const MyProducts = () => {
                     productName,
                     price,
                     image,
-                    time: data.getTime()
+                    time: data.getTime(),
                 })
             })
                 .then(res => res.json())
